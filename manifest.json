@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Block Names",
+    "version": "1.0.0",
+    "description": "Blocks a name of your choosing from showing up in your browsser.",
+    "icons": {
+        "128": "names128.png",
+        "48": "names48.png",
+        "16": "names16.png"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "scripting", "tabs", "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["script.js"],
+            "css": ["style.css"]
+        }
+    ]
+}
